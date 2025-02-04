@@ -17,7 +17,7 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -$(HEADER) -c $< -o $@
+	$(CC) $(CFLAGS) -I$(HEADER) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
